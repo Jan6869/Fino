@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover,interactive-widget=resizes-content">
+<!-- Datenschutz: Die Seite darf keine Verbindung ins Internet aufbauen (connect-src 'none'). -->
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; font-src 'self'; manifest-src 'self'; worker-src 'self'; connect-src 'none'; base-uri 'none'; form-action 'none'">
+<meta name="color-scheme" content="light dark">
+<meta name="theme-color" content="#eef5f6" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#0a1213" media="(prefers-color-scheme: dark)">
+<title>Fino</title>
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="icon" href="icons/icon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="icons/icon-192.png">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="ph">
+  <main id="main"></main>
+  <button class="fab" data-act="fab" aria-label="Neue Buchung erfassen">+</button>
+  <nav id="nav" aria-label="Hauptmenü">
+    <button data-act="tab" data-i="0"><span class="ic"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3 3 10.5V21h6v-6h6v6h6V10.5z"/></svg></span>Start</button>
+    <button data-act="tab" data-i="1"><span class="ic"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M11 3.1A9 9 0 1 0 20.9 13H11zM13 2v9h9A9 9 0 0 0 13 2z"/></svg></span>Statistik</button>
+    <button data-act="tab" data-i="2"><span class="ic"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 7h10v3l4-4-4-4v3H5v6h2zm10 10H7v-3l-4 4 4 4v-3h12v-6h-2z"/></svg></span>Fixkosten</button>
+    <button data-act="tab" data-i="3"><span class="ic"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 10a2 2 0 100 4 2 2 0 000-4zm7 0a2 2 0 100 4 2 2 0 000-4zm7 0a2 2 0 100 4 2 2 0 000-4z"/></svg></span>Mehr</button>
+  </nav>
+  <div class="sc" id="sc"><div class="sh" id="sh" role="dialog" aria-modal="true"></div></div>
+  <div id="toast" role="status" aria-live="polite"></div>
+  <input type="file" id="imp" accept=".json,application/json" hidden>
+</div>
+<script src="app.js"></script>
+</body>
+</html>

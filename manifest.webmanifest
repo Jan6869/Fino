@@ -1,0 +1,23 @@
+{
+  "name": "Fino – Finanzen",
+  "short_name": "Fino",
+  "description": "Einnahmen und Ausgaben im Blick, komplett lokal auf deinem Gerät.",
+  "lang": "de",
+  "id": "./",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#eef5f6",
+  "theme_color": "#eef5f6",
+  "categories": ["finance"],
+  "icons": [
+    { "src": "icons/icon-192.png", "sizes": "192x192", "type": "image/png", "purpose": "any" },
+    { "src": "icons/icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any" },
+    { "src": "icons/maskable-512.png", "sizes": "512x512", "type": "image/png", "purpose": "maskable" }
+  ],
+  "shortcuts": [
+    { "name": "Neue Ausgabe", "short_name": "Ausgabe", "url": "./?add=out", "icons": [{ "src": "icons/icon-192.png", "sizes": "192x192", "type": "image/png" }] },
+    { "name": "Neue Einnahme", "short_name": "Einnahme", "url": "./?add=inc", "icons": [{ "src": "icons/icon-192.png", "sizes": "192x192", "type": "image/png" }] }
+  ]
+}
