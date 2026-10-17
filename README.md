@@ -2,7 +2,7 @@
 
 Finanz-App für das Handy. Einnahmen und Ausgaben erfassen, Fixkosten automatisch buchen, Statistik pro Monat. Alles läuft lokal auf dem Gerät: kein Konto, keine Cloud, keine Verbindung ins Internet.
 
-**Diese Branch (`apple-design`) enthält Version 5 im neuen Apple-Design.** Die ältere Version 4 (Material-Design) liegt unverändert auf der Branch `main` und unter der Marke `v4-material`. Beide Versionen speichern ihre Daten im selben Format und verstehen sich gegenseitig, ein Wechsel hin und zurück verliert nichts.
+**Diese Branch (`apple-design`) enthält Version 5 im neuen Apple-Design.** Die ältere Version 4 (Material-Design) liegt unverändert auf der Branch `main`. Beide Versionen speichern ihre Daten im selben Format und verstehen sich gegenseitig, ein Wechsel hin und zurück verliert nichts.
 
 ## Auf dem Pixel installieren
 
