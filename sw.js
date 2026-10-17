@@ -1,10 +1,10 @@
 /* Fino – Service Worker: macht die App offline nutzbar.
    Er lädt ausschließlich die eigenen Dateien dieser App. Deine Buchungen
    liegen in der Datenbank des Browsers und werden nie versendet. */
-const CACHE = 'fino-v4';   // bei jeder neuen Version hochzählen (und VERSION in app.js ebenso)
+const CACHE = 'fino-v5';   // bei jeder neuen Version hochzählen (und VERSION in app.js ebenso)
 const SHELL = [
   './', 'index.html', 'style.css', 'app.js', 'manifest.webmanifest',
-  'fonts/outfit-latin-wght-normal.woff2',
+  'fonts/inter-latin-opsz-normal.woff2',
   'icons/icon.svg', 'icons/icon-192.png', 'icons/icon-512.png', 'icons/maskable-512.png'
 ];
 

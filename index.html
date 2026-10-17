@@ -6,8 +6,8 @@
 <!-- Datenschutz: Die Seite darf keine Verbindung ins Internet aufbauen (connect-src 'none'). -->
 <meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; font-src 'self'; manifest-src 'self'; worker-src 'self'; connect-src 'none'; base-uri 'none'; form-action 'none'">
 <meta name="color-scheme" content="light dark">
-<meta name="theme-color" content="#eef5f6" media="(prefers-color-scheme: light)">
-<meta name="theme-color" content="#0a1213" media="(prefers-color-scheme: dark)">
+<meta name="theme-color" content="#f2f2f7" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#000000" media="(prefers-color-scheme: dark)">
 <title>Fino</title>
 <link rel="manifest" href="manifest.webmanifest">
 <link rel="icon" href="icons/icon.svg" type="image/svg+xml">
@@ -16,15 +16,27 @@
 </head>
 <body>
 <div class="ph">
-  <main id="main"></main>
-  <button class="fab" data-act="fab" aria-label="Neue Buchung erfassen">+</button>
-  <nav id="nav" aria-label="Hauptmenü">
-    <button data-act="tab" data-i="0"><span class="ic"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3 3 10.5V21h6v-6h6v6h6V10.5z"/></svg></span>Start</button>
-    <button data-act="tab" data-i="1"><span class="ic"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M11 3.1A9 9 0 1 0 20.9 13H11zM13 2v9h9A9 9 0 0 0 13 2z"/></svg></span>Statistik</button>
-    <button data-act="tab" data-i="2"><span class="ic"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 7h10v3l4-4-4-4v3H5v6h2zm10 10H7v-3l-4 4 4 4v-3h12v-6h-2z"/></svg></span>Fixkosten</button>
-    <button data-act="tab" data-i="3"><span class="ic"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 10a2 2 0 100 4 2 2 0 000-4zm7 0a2 2 0 100 4 2 2 0 000-4zm7 0a2 2 0 100 4 2 2 0 000-4z"/></svg></span>Mehr</button>
-  </nav>
-  <div class="sc" id="sc"><div class="sh" id="sh" role="dialog" aria-modal="true"></div></div>
+  <div id="app">
+    <div id="pages">
+      <section class="pg" id="p0">
+        <header class="nb"><div class="nl"></div><div class="nt"></div><div class="nr"></div></header>
+        <div class="sc" id="main"></div>
+      </section>
+    </div>
+    <div id="dock">
+      <nav id="nav" class="glass" aria-label="Hauptmenü">
+        <i class="th"></i>
+        <button data-act="tab" data-i="0"><svg class="i fl" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 10.6 12 4l8 6.6V19a1.5 1.5 0 0 1-1.5 1.5H15V15H9v5.5H5.5A1.5 1.5 0 0 1 4 19z"/></svg><span>Start</span></button>
+        <button data-act="tab" data-i="1"><svg class="i fl" viewBox="0 0 24 24" aria-hidden="true"><path d="M11 4.2A8.2 8.2 0 1 0 19.8 13H11z"/><path d="M13.6 3.6a8.2 8.2 0 0 1 6.8 6.8h-6.8z"/></svg><span>Statistik</span></button>
+        <button data-act="tab" data-i="2"><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="M4.5 11V9.5A3.5 3.5 0 0 1 8 6h10.5M15.5 3l3 3-3 3M19.5 13v1.5A3.5 3.5 0 0 1 16 18H5.5M8.5 21l-3-3 3-3"/></svg><span>Fixkosten</span></button>
+        <button data-act="tab" data-i="3"><svg class="i dots" viewBox="0 0 24 24" aria-hidden="true"><circle cx="5.5" cy="12" r="2"/><circle cx="12" cy="12" r="2"/><circle cx="18.5" cy="12" r="2"/></svg><span>Mehr</span></button>
+      </nav>
+      <button class="fab" data-act="fab" aria-label="Neue Buchung erfassen"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 4.5v15M4.5 12h15"/></svg></button>
+    </div>
+  </div>
+  <div id="scrim" hidden></div>
+  <div id="sh" role="dialog" aria-modal="true" hidden><div id="gz"><i class="gr"></i></div><div id="sv"></div></div>
+  <div id="al" hidden><div id="alb" class="alert" role="alertdialog" aria-modal="true"></div></div>
   <div id="toast" role="status" aria-live="polite"></div>
   <input type="file" id="imp" accept=".json,application/json" hidden>
 </div>
